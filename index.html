@@ -9,12 +9,8 @@
   </head>
   <body>
     <p>Redirection vers le formulaire d’évaluation…</p>
-    <p><a id="destination" rel="noreferrer">Continuer manuellement</a></p>
+    <p><a href="/formulaire/">Continuer manuellement</a></p>
 
-    <script src="destination.js"></script>
-    <script>
-      document.getElementById("destination").href = APIR_DESTINATION_URL;
-      window.location.replace(APIR_DESTINATION_URL);
-    </script>
+    <script>window.location.replace("/formulaire/");</script>
   </body>
 </html>
