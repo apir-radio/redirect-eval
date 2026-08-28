@@ -1,22 +1,25 @@
 # eval.apir-radio.fr
 
-Redirection minimale GitHub Pages vers le formulaire d’évaluation APIR.
+Deux redirections minimales GitHub Pages :
 
-## Changer de formulaire au prochain semestre
+- `https://eval.apir-radio.fr/formulaire` vers le Google Form d’évaluation ;
+- `https://eval.apir-radio.fr/resultats` vers le Google Sheets privé des résultats.
 
-1. Ouvrir [`destination.js`](destination.js).
-2. Cliquer sur le crayon **Edit this file**.
-3. Remplacer uniquement l’URL entre guillemets.
-4. Cliquer sur **Commit changes**.
+La racine `https://eval.apir-radio.fr` redirige vers `/formulaire` pour préserver l’ancien lien.
 
-La nouvelle destination sera publiée automatiquement par GitHub Pages. Il n’y a rien à changer dans le DNS, le domaine personnalisé ou les autres fichiers.
+## Changer les destinations
+
+- Formulaire : modifier [`formulaire/destination.js`](formulaire/destination.js).
+- Résultats : modifier [`resultats/destination.js`](resultats/destination.js).
+
+Dans chaque fichier, remplacer uniquement l’URL entre guillemets puis valider le commit. La nouvelle destination sera publiée automatiquement. Il n’y a rien à changer dans le DNS, le domaine personnalisé ou les autres fichiers.
 
 ## Configuration
 
 - Domaine : `eval.apir-radio.fr`
 - Publication : branche `main`, dossier `/ (root)`
 - DNS : `CNAME eval → apir-radio.github.io.`
-- Indexation : désactivée par la balise `robots` de `index.html`
-- Authentification supplémentaire : aucune
+- Indexation : désactivée par les balises `robots`
+- Authentification supplémentaire : aucune ; les droits du Sheet restent gérés par Google
 
 Le fichier `CNAME` doit rester présent. Le fichier `.nojekyll` désactive tout traitement Jekyll inutile.
