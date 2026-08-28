@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="referrer" content="no-referrer">
+    <title>Formulaire d’évaluation APIR</title>
+  </head>
+  <body>
+    <p>Redirection vers le formulaire d’évaluation…</p>
+    <p><a id="destination" rel="noreferrer">Continuer manuellement</a></p>
+
+    <script src="destination.js"></script>
+    <script>
+      document.getElementById("destination").href = APIR_DESTINATION_URL;
+      window.location.replace(APIR_DESTINATION_URL);
+    </script>
+  </body>
+</html>
